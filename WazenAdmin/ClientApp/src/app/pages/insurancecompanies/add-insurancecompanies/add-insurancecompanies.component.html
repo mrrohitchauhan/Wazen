@@ -1,0 +1,339 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content d-flex justify-content-center">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">{{ !InsuranceCompaniesId ? "Add" : "View" }} Insurance Company</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="insuranceCompaniesForm" (ngSubmit)="onSubmit()">
+            <div class="row mx-1">
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputPassword4">Insurance Company</label>
+                  <input type="text" class="form-control" placeholder="Name of Insurance Company"
+                         formControlName="nameoftheIC" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Admin Name</label>
+                  <input type="text" class="form-control" placeholder="Admin Name"
+                         formControlName="nameofICAdmin" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Email Address</label>
+                  <input type="text" class="form-control" id="inputICAdminEmailAddress" placeholder="Email Address"
+                         formControlName="icAdminEmailAddress" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Password</label>
+                  <input type="text" class="form-control" id="inputICAdminPassword" placeholder="Password"
+                         formControlName="icAdminPassword" maxlength="40">
+                </div>
+              </div>
+
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Phone Number</label>
+                  <input type="text" class="form-control" id="inputICAdminPhoneNumber" placeholder="Phone Number"
+                         formControlName="icAdminPhoneNumber" maxlength="40">
+                </div>
+              </div>
+
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Start Date of Collaboration</label>
+                  <input type="text" class="form-control" id="inputStartDateofCollaboration" placeholder="Date of Collaboration"
+                         formControlName="startDateofCollaboration" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputEmail4">Location/Address</label>
+                  <input type="email" class="form-control" id="inputLocation" placeholder="Location"
+                         formControlName="location" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">City</label>
+                  <input type="text" class="form-control" id="inputCity" placeholder="City"
+                         formControlName="city" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Office Number</label>
+                  <input type="text" class="form-control" id="inputOfficeNumber" placeholder="Office Number"
+                         formControlName="officeNumber" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Agreement</label>
+                  <input type="text" class="form-control" id="inputAgreements" placeholder="Agreement"
+                         formControlName="agreements" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">No of Policies</label>
+                  <input type="text" class="form-control" id="inputNoofPolicies" placeholder="No of Policies"
+                         formControlName="noofPolicies" maxlength="40" (keypress)="_sharedUtils.isNumber($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Configurable Parameters</label>
+                  <input type="text" class="form-control" id="inputConfigurableParameters" placeholder="Configurable Parameters"
+                         formControlName="configurableParameters" maxlength="40" (keypress)="_sharedUtils.isNumber($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Expense For NAJM </label>
+                  <input type="text" class="form-control" id="inputAdminExpenseForNAJM" placeholder="Expense For NAJM "
+                         formControlName="adminExpenseForNAJM" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Expense For ELM </label>
+                  <input type="text" class="form-control" id="inputAdminExpenseForELM" placeholder="Expense For ELM"
+                         formControlName="adminExpenseForELM" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Bank Fees</label>
+                  <input type="text" class="form-control" id="inputBankFees" placeholder="Bank Fees"
+                         formControlName="bankFees" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Default Expenses</label>
+                  <input type="text" class="form-control" id="inputDefaultExpenses" placeholder="Default Expenses"
+                         formControlName="defaultExpenses" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Sharing Percentage For Cancellation</label>
+                  <input type="text" class="form-control" id="inputSharingPercentageForCancellation" placeholder="Sharing Percentage For Cancellation"
+                         formControlName="sharingPercentageForCancellation" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Sharing Percentage For Administration Fees</label>
+                  <input type="text" class="form-control" id="inputSharingPercentageForAdministrationFees" placeholder="Sharing Percentage For Administration Fees"
+                         formControlName="sharingPercentageForAdministrationFees" maxlength="20">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Commission Agreed</label>
+                  <input type="text" class="form-control" id="inputCommissionAgreed" placeholder="Commission Agreed"
+                         formControlName="commissionAgreed" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">API Available</label>
+                  <input type="text" class="form-control" id="inputAPIAvailable" placeholder="API Available"
+                         formControlName="apiAvailable" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">End point URL</label>
+                  <input type="text" class="form-control" id="inputEndpointURL" placeholder="End point URL"
+                         formControlName="endpointURL" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Request Type</label>
+                  <input type="text" class="form-control" id="inputRequestType" placeholder="Request Type"
+                         formControlName="requestType" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Header</label>
+                  <input type="text" class="form-control" id="inputHeader" placeholder="Header"
+                         formControlName="header" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Body</label>
+                  <input type="text" class="form-control" id="inputBody" placeholder="Body"
+                         formControlName="body" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Cancel API Available</label>
+                  <input type="text" class="form-control" id="inputCancelAPIAvailable" placeholder="Cancel API Available"
+                         formControlName="cancelAPIAvailable" maxlength="20">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Cancel End point URL</label>
+                  <input type="text" class="form-control" id="inputCancelEndpointURL" placeholder="Cancel End point URL"
+                         formControlName="cancelEndpointURL" maxlength="20">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Cancel Request Type</label>
+                  <input type="text" class="form-control" id="inputCancelRequestType" placeholder="Cancel Request Type"
+                         formControlName="cancelRequestType" maxlength="20">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Cancel Header</label>
+                  <input type="text" class="form-control" id="inputCancelHeader" placeholder="Cancel Header"
+                         formControlName="cancelHeader" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Cancel Body</label>
+                  <input type="text" class="form-control" id="inputCancelBody" placeholder="Cancel Body"
+                         formControlName="cancelBody" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Refund End point URL</label>
+                  <input type="text" class="form-control" id="inputRefundEndpointURL" placeholder="Refund End point URL"
+                         formControlName="refundEndpointURL" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Refund Request Type</label>
+                  <input type="text" class="form-control" id="inputRefundRequestType" placeholder="Refund Request Type"
+                         formControlName="refundRequestType" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Refund Header</label>
+                  <input type="text" class="form-control" id="inputRefundHeader" placeholder="Refund Header"
+                         formControlName="refundHeader" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Refund Body</label>
+                  <input type="text" class="form-control" id="inputRefundBody" placeholder="Refund Body"
+                         formControlName="refundBody" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Refund End point URL</label>
+                  <input type="text" class="form-control" id="inputRefundEndpointURL" placeholder="Refund End point URL"
+                         formControlName="refundEndpointURL" maxlength="40">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <div class="form-group col-md-6">
+                    <label for="inputAddress">Add Ons Remove End point URL</label>
+                    <input type="text" class="form-control" id="inputAddOnsRemoveEndpointURL" placeholder="Add Ons Remove End point URL"
+                           formControlName="addOnsRemoveEndpointURL" maxlength="40">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="inputAddress">Add Ons Remove Request Type</label>
+                    <input type="text" class="form-control" id="inputAddOnsRemoveRequestType" placeholder="Add Ons Remove Request Type"
+                           formControlName="addOnsRemoveRequestType" maxlength="40">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="inputAddress">Add Ons Remove Header</label>
+                    <input type="text" class="form-control" id="inputAddOnsRemoveHeader" placeholder="Add Ons Remove Header"
+                           formControlName="addOnsRemoveHeader" maxlength="40">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="inputAddress">Add Ons Remove Body</label>
+                    <input type="text" class="form-control" id="inputAddOnsRemoveBody" placeholder="Add Ons Remove Body"
+                           formControlName="addOnsRemoveBody" maxlength="40">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="inputAddress">Add Ons Remove Policy Pricing</label>
+                    <input type="text" class="form-control" id="inputAddOnsRemovePolicyPricing" placeholder="Add Ons Remove Policy Pricing"
+                           formControlName="addOnsRemovePolicyPricing" maxlength="40">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="inputAddress">IsActive</label>
+                    <input type="text" class="form-control" id="inputIsActive" placeholder="IsActive"
+                           formControlName="isActive" maxlength="40">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="inputAddress">Created By</label>
+                    <input type="text" class="form-control" id="inputICCreatedBy" placeholder="Created By"
+                           formControlName="createdBy" maxlength="40">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="inputAddress">Created On</label>
+                    <input type="text" class="form-control" id="inputCreatedOn" placeholder="Created On"
+                           formControlName="createdOn" maxlength="40">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="inputAddress">Modified By</label>
+                    <input type="text" class="form-control" id="inputModifiedBy" placeholder="Modified By"
+                           formControlName="modifiedBy" maxlength="40">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="inputAddress">Modified On</label>
+                    <input type="text" class="form-control" id="inputModifiedOn" placeholder="Modified On"
+                           formControlName="modifiedOn" maxlength="40">
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group float-right">
+                  <button [disabled]="insuranceCompaniesForm.invalid" class="btn btn-primary btn-block">{{ !InsuranceCompaniesId ? "Add" : "Update" }} Insurance Company</button>
+                </div>
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

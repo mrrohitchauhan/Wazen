@@ -1,0 +1,55 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content d-flex justify-content-center">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">{{ !roleId ? "Add" : "View" }} Role</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="roleForm" (ngSubmit)="onSubmit()">
+            <div class="row mx-1">
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputEmail4">Role Name</label>
+                  <input type="text" class="form-control" formControlName="roleName" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputEmail4">Role Arabic Name</label>
+                  <input type="text" class="form-control" id="inputPassword4"
+                         formControlName="roleArabicName" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Description</label>
+                  <input type="text" class="form-control" id="inputAddress"
+                         formControlName="description" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group float-left">
+                  <label for="inputAddress">IsActive</label>
+                  <input type="checkbox" class="form-control" id="isActive"
+                         formControlName="isActive">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group float-right">
+                  <button class="btn btn-primary btn-block"
+                          [disabled]="roleForm.invalid">
+                          {{ !roleId ? "Add" : "Update" }} Role
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

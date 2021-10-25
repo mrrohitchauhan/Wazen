@@ -1,0 +1,58 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header d-flex justify-content-center align-items-center">
+          <h4 class="card-title p-2 w-100">Roles</h4>
+          <!--<div class="input-group no-border w-25">
+            <input type="text"
+                   [(ngModel)]="searchText"
+                   class="form-control"
+                   placeholder="Search..." />
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <i class="now-ui-icons ui-1_zoom-bold"></i>
+              </div>
+            </div>
+          </div>-->
+          <i class="now-ui-icons ui-1_simple-add add-icon custom-icon mr-3" routerLink="/wazen/add-role"></i>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="insurancecompanies.length">
+              <thead>
+                <tr>
+                  <th>Sr No</th>
+                  <th>Insurance Company</th>
+                  <th>Admin Name</th>
+                  <th>Phone Number</th>
+                  <th>Location</th>
+                  <th>City</th>
+                  <th>IsActive</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let Isusers of insurancecompanies; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ Isusers.nameoftheIC}}</td>
+                  <td>{{ Isusers.nameofICAdmin}}</td>
+                  <td>{{ Isusers.icAdminPhoneNumber}}</td>
+                  <td>{{ Isusers.location}}</td>
+                  <td>{{ Isusers.city}}</td>
+                  <td>{{ Isusers.isActive}}</td>
+                  <td>
+                    <i class="now-ui-icons education_glasses custom-icon mr-3"
+                       [routerLink]="['/wazen/add-insurancecompanies', Isusers.icid]"></i>
+                    <i class="now-ui-icons ui-1_simple-remove custom-icon" (click)="deleteInsuranceCompanies(Isusers.icid)"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

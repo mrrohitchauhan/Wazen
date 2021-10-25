@@ -1,0 +1,58 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header d-flex justify-content-center align-items-center">
+          <h4 class="card-title p-2 w-100">Static Content List</h4>
+          <!--<div class="input-group no-border w-25">
+            <input type="text"
+                   [(ngModel)]="searchText"
+                   class="form-control"
+                   placeholder="Search..." />
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <i class="now-ui-icons ui-1_zoom-bold"></i>
+              </div>
+            </div>
+          </div>-->
+          <i class="now-ui-icons ui-1_simple-add add-icon custom-icon mr-3"
+             routerLink="/wazen/add-staticcontent"></i>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <tr>
+                  <th>Sr No</th>
+                  <th>Company Name</th>
+                  <th>Partner Name</th>
+                  <th>Status</th>
+                  <th>Contact No</th>
+                  <th>Website Link</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let staticcontentt of staticcontent; let i=index">
+                  <td>{{ i+1 }}</td>
+                  <td>{{ staticcontentt.nameOfTheCompany }}</td>
+                  <td>{{ staticcontentt.partnerName }}</td>
+                  <td>{{ staticcontentt.status }}</td>
+                  <td>{{ staticcontentt.contactNo }}</td>
+                  <td>{{ staticcontentt.websiteLink }}</td>
+                  <td>
+                    <i class="now-ui-icons education_glasses custom-icon mr-3"
+                       [routerLink]="['/wazen/add-staticcontent', staticcontentt.id]"></i>
+                    <i class="now-ui-icons ui-1_simple-remove custom-icon"
+                       (click)="deleteStaticContent(staticcontentt.id)"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

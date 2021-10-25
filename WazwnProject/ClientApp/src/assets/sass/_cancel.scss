@@ -1,0 +1,169 @@
+.cancel-policy-stepwizard {
+  #progressbar {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+
+    li {
+      list-style-type: none;
+      color: #c4c4c4;
+      font-size: 0.85rem;
+      text-align: center;
+      width: fit-content;
+      float: left;
+      position: relative;
+      margin: 0 1rem;
+      &:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 2.5rem;
+        line-height: 2.5rem;
+        font-weight: 600;
+        display: block;
+        font-size: 1rem;
+        color: #fff;
+        background: #c4c4c4;
+        border-radius: 50%;
+        margin: 0 auto 0.752rem auto;
+      }
+      &:first-child:after {
+        content: none;
+      }
+    }
+    li.checked {
+      &::before {
+        content: "\eca4" !important;
+        font-family: boxicons !important;
+        font-size: 1.5rem;
+      }
+    }
+    li.open {
+      color: $primary;
+      &:before,
+      &:after {
+        background: $primary;
+        color: white;
+      }
+    }
+  }
+}
+
+.cancel-policy-wrap {
+    padding: 8rem 0;
+    &_title {
+      p {
+        color: #7B7B7B;
+      }
+      h4 {
+        font-family: "Poppins-Bold";
+      }
+ 
+    }
+    &_inner {
+        .icon-car {
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+            margin: 0 5px 0 0;
+            background-position: 0 21.5%;
+            background: url(../img/car-icon.svg) no-repeat;
+            background-size: 75%;
+            display: inline-block;
+          }
+      .col-1 {
+        width: 4rem;
+        padding: 0 0.2rem;
+  
+        .form-control {
+          height: 3rem;
+          font-size: 1.3rem;
+        }
+      }
+      .conformation-checkbox {
+        display: flex;
+        justify-content: center;
+        .customcheck {
+          display: block;
+          position: relative;
+          padding-left: 26px;
+          margin-bottom: 12px;
+          cursor: pointer;
+  
+          font-size: 0.8rem;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+          }
+        }
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin-top: 2px;
+          height: 16px;
+          width: 16px;
+          background-color: #b5b5b5;
+          border-radius: 50%;
+        }
+        .customcheck:hover input ~ .checkmark {
+          background-color: #ccc;
+        }
+        .customcheck input:checked ~ .checkmark {
+          background-color: #06aecc;
+          border-radius: 50%;
+          transition: 0.3s all ease-in;
+        }
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        .customcheck input:checked ~ .checkmark:after {
+          display: block;
+        }
+        .customcheck .checkmark:after {
+          left: 5px;
+          top: 2px;
+          width: 4.5px;
+          height: 9px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+      .owl-carousel {
+        .owl-nav {
+          .nav-btn {
+            height: 30px;
+            position: absolute;
+            width: 30px;
+            cursor: pointer;
+            top: -30px !important;
+            background-color: #e2e2e2;
+            border-radius: 50%;
+          }
+          .prev-slide {
+            left: -1.5rem;
+          }
+          .next-slide {
+            right: -1.5rem;
+          }
+          .owl-prev i,
+          .owl-next i {
+            color: #fff;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }

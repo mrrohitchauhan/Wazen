@@ -1,0 +1,127 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content d-flex justify-content-center">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">{{ !staticContentId ? "Add" : "View" }} Static Content</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="staticContentForm" (ngSubmit)="onSubmit()">
+            <div class="row mx-1">
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputNameOfTheCompany">Company Name</label>
+                  <input type="text" class="form-control" id="inputNameOfTheCompany" placeholder="NameOfTheCompany"
+                         formControlName="nameOfTheCompany" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputPartnerName">Partner Name</label>
+                  <input type="text" class="form-control" id="inputPartnerName" placeholder="Partner Name"
+                          formControlName="partnerName" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputPartnerLogo">Partner Logo</label>
+                  <input type="text" class="form-control" id="inputPartnerLogo" placeholder="PartnerLogo"
+                          formControlName="partnerLogo" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Address"
+                          formControlName="address" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputContactNo">Contact No</label>
+                  <input type="text" class="form-control" id="inputContactNo" placeholder="ContactNo"
+                          formControlName="contactNo" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputEmailAddress">Email Address</label>
+                  <input type="text" class="form-control" id="inputEmailAddress" placeholder="EmailAddress"
+                          formControlName="emailAddress" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputStatus">Status</label>
+                  <input type="text" class="form-control" id="inputStatus" placeholder="Status"
+                          formControlName="status" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                  </div>
+                </div>   
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                    <label for="inputAboutUs">About Us</label>
+                    <input type="text" class="form-control" id="inputAboutUs" placeholder="AboutUs"
+                           formControlName="aboutUs" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                  </div>
+                </div>              
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputRedirectedURL">Redirected URL</label>
+                  <input type="text" class="form-control" id="inputRedirectedURL" placeholder="RedirectedURL"
+                         formControlName="redirectedURL" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+              
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputSocialMediaIcon">Social MediaIcon</label>
+                  <input type="text" class="form-control" id="inputSocialMediaIcon" placeholder="SocialMediaIcon"
+                         formControlName="socialMediaIcon" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputSocialMediaLink">Social Media Link</label>
+                  <input type="text" class="form-control" id="inputSocialMediaLink" placeholder="SocialMediaLink"
+                         formControlName="socialMediaLink" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputWebsiteLink">Website Link</label>
+                  <input type="text" class="form-control" id="inputWebsiteLink" placeholder="WebsiteLink"
+                         formControlName="websiteLink" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputGoogleLocation">Google Location</label>
+                  <input type="text" class="form-control" id="inputGoogleLocation" placeholder="GoogleLocation"
+                         formControlName="googleLocation" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="inputTermsAndCondition">Terms and Condition</label>
+                    <input type="text" class="form-control" id="inputTermsAndCondition" placeholder="TermsAndCondition"
+                           formControlName="termsAndCondition" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                  </div>
+                  </div> 
+              </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group float-right">
+                  <button class="btn btn-primary btn-block"
+                          [disabled]="staticContentForm.invalid">
+                    {{ !staticContentId ? "Add" : "Update" }} Static Content
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

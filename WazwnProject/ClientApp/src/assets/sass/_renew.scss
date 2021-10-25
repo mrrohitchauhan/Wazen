@@ -1,0 +1,432 @@
+.renew-policy-stepwizard {
+  #progressbar {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+
+    li {
+      list-style-type: none;
+      color: #c4c4c4;
+      font-size: 0.85rem;
+      text-align: center;
+      width: fit-content;
+      float: left;
+      position: relative;
+      margin: 0 1rem;
+      &:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 2.5rem;
+        line-height: 2.5rem;
+        font-weight: 600;
+        display: block;
+        font-size: 1rem;
+        color: #fff;
+        background: #c4c4c4;
+        border-radius: 50%;
+        margin: 0 auto 0.752rem auto;
+      }
+      &:first-child:after {
+        content: none;
+      }
+    }
+    li.checked {
+      &::before {
+        content: "\eca4" !important;
+        font-family: boxicons !important;
+        font-size: 1.5rem;
+      }
+    }
+    li.open {
+      color: $primary;
+      &:before,
+      &:after {
+        background: $primary;
+        color: white;
+      }
+    }
+  }
+}
+.renew-policy-wrap {
+  padding: 8rem 0;
+  &_title {
+    p {
+      color: #a0a0a0;
+    }
+    h4 {
+      font-family: "Poppins-Bold";
+    }
+    .icon-car {
+      width: 25px;
+      height: 25px;
+      vertical-align: middle;
+      margin: 0 5px 0 0;
+      background-position: 0 21.5%;
+      background: url(../img/car-icon.svg) no-repeat;
+      background-size: 75%;
+      display: inline-block;
+    }
+  }
+  &_inner {
+    .col-1 {
+      width: 4rem;
+      padding: 0 0.2rem;
+
+      .form-control {
+        height: 3rem;
+        font-size: 1.3rem;
+      }
+    }
+    .conformation-checkbox {
+      display: flex;
+      justify-content: center;
+      .customcheck {
+        display: block;
+        position: relative;
+        padding-left: 26px;
+        margin-bottom: 12px;
+        cursor: pointer;
+
+        font-size: 0.8rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background-color: #b5b5b5;
+        border-radius: 50%;
+      }
+      .customcheck:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+      .customcheck input:checked ~ .checkmark {
+        background-color: #06aecc;
+        border-radius: 50%;
+        transition: 0.3s all ease-in;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .customcheck input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .customcheck .checkmark:after {
+        left: 5px;
+        top: 3px;
+        width: 4.5px;
+        height: 9px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    .owl-carousel {
+      .owl-nav {
+        .nav-btn {
+          height: 30px;
+          position: absolute;
+          width: 30px;
+          cursor: pointer;
+          top: -30px !important;
+          background-color: #e2e2e2;
+          border-radius: 50%;
+        }
+        .prev-slide {
+          left: -1.5rem;
+        }
+        .next-slide {
+          right: -1.5rem;
+        }
+        .owl-prev i,
+        .owl-next i {
+          color: #fff;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+.renew-policy-tab {
+  li {
+    a {
+      width: 180px;
+      text-align: center;
+    }
+  }
+}
+#add-comprehensive {
+  #datepickerInput {
+    background-image: url(../img/date-icon-2.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
+    background-size: 1.5rem 1.5rem;
+    cursor: pointer;
+  }
+  table {
+    border: 1px solid #e1e1e1;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-color: 0px;
+    border-bottom-style: none;
+
+    thead {
+      tr {
+        border: 0;
+        th {
+          padding: 2.2rem 0;
+          color: $primary;
+          font-family: "Poppins-SemiBold";
+          border: 0;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          font-family: "Poppins-Bold";
+          font-size: 1.1rem;
+          vertical-align: middle;
+          padding: 0.5rem;
+          position: relative;
+          &:first-child {
+            border-left: 0;
+          }
+          &:last-child {
+            border-right: 0;
+          }
+          a {
+            font-family: inherit;
+          }
+
+          .price {
+            font-family: "Poppins-Bold";
+
+            &::before {
+              content: "SAR ";
+              font-size: 0.875rem;
+              font-family: "Poppins-Medium";
+              color: #b5b5b3;
+            }
+          }
+          span.price-valid {
+            font-size: 0.775rem;
+            color: #c48e8b;
+          }
+          .range-action {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 12px;
+            right: 28%;
+            a {
+              color: #d1d1d1;
+              height: 20px;
+              i {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.details-list-wrap {
+  position: relative;
+}
+.dp-modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  overflow: unset;
+  background-color: #ffffffdb;
+  padding-top: 8%;
+  transition: 0.5s ease-in all;
+}
+.modal-contents {
+  position: relative;
+  width: 95%;
+  background-color: #eafbff;
+  margin: auto;
+  padding: 20px 20px 0 20px;
+  border: 2px solid $primary;
+  border-radius: 5px;
+  transition: 0.5s ease-in all;
+  p {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  .details-list-info {
+    text-align: left;
+    p {
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+    }
+    span {
+      font-size: 0.775rem;
+    }
+    .price {
+      font-family: "Poppins-SemiBold";
+      font-size: 1.2rem;
+
+      &::before {
+        content: "SAR ";
+        font-size: 0.875rem;
+        font-family: "Poppins-Medium";
+        color: #a3a3a3;
+      }
+    }
+    &_1 {
+      span {
+        color: #1fad35;
+      }
+    }
+    &_2 {
+      span {
+        font-family: "Poppins-Light";
+      }
+    }
+    &_3 {
+      position: relative;
+      .range-action {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 28%;
+        a {
+          color: #d1d1d1;
+          height: 20px;
+          i {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+    &_4 {
+      span {
+        font-size: 0.675rem;
+        color: #c48d8d;
+      }
+    }
+  }
+}
+.details-close {
+  color: $primary;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  background-color: #fff;
+  top: 10px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  @include for-dflex();
+  border-radius: 50%;
+  &:hover,
+  &:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+.renew-review-wrap {
+  &_l {
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 150px 0;
+    span {
+      font-size: 0.85rem;
+    }
+    P {
+      font-size: 0.75rem;
+      font-family: "Poppins-Light";
+    }
+  }
+  &_r {
+    table {
+      tr {
+        td {
+          color: $textlight;
+          font-family: "Poppins-Light";
+          font-size: 0.9rem;
+          padding: 0.325rem 0;
+          b {
+            color: $secondary;
+            font-family: "Poppins-SemiBold";
+            padding-left: 4rem;
+          }
+          .policies-price {
+            padding-left: 2rem;
+            color: #080808;
+            font-family: "Poppins-Bold";
+
+            &::before {
+              font-family: "Poppins-Medium";
+
+              color: $textlight;
+            }
+          }
+        }
+        dt {
+          font-family: "Poppins-Bold";
+        }
+        dd {
+          font-family: "Poppins-Light";
+          margin-left: 10px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &_total {
+    table {
+      tr {
+        td {
+          width: 160px;
+        }
+      }
+    }
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    .policies-price {
+      font-size: 1.3rem;
+      font-family: "Poppins-Bold";
+      padding-left: 2.5rem;
+      &::before {
+        font-family: "Poppins-Medium";
+      }
+    }
+  }
+}

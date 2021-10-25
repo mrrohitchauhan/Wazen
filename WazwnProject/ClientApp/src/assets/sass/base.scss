@@ -1,0 +1,66 @@
+@import "variables";
+@import "globals";
+@import "header";
+@import "sidebar";
+@import "account";
+@import "profile";
+@import "home";
+@import "faq";
+@import "notifications";
+@import "company";
+@import "addremove";
+@import "claim";
+@import "renew";
+@import "cancel";
+@import "navtab";
+@import "footer";
+
+/* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width: 320px) {
+}
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width: 481px) {
+}
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width: 641px) {
+}
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width: 961px) {
+}
+/* big landscape tablets, laptops, and desktops */
+@media only screen and (min-width: 1100px) and (max-width: 1350px) {
+  .hero-form {
+    right: 30px;
+    padding: 10px 30px 15px 30px;
+    width: 45%;
+  }
+}
+/* hi-res laptops and desktops */
+@media (min-width: 1281px) {
+}
+@media only screen and (min-width: 992px) and (max-width: 1390px) {
+  .hero-form {
+    right: 30px;
+    padding: 30px;
+    width: 43.5%;
+    .form-title {
+      font-size: 18px;
+      margin: 0 0 18px 0;
+    }
+  }
+  .hero-form form {
+    padding: 30px 40px;
+  }
+  .claim-selection .list-con {
+    padding: 8px 8px 10px;
+    span {
+      font-size: 12px;
+    }
+  }
+  .step-box {
+    padding: 50px 20px;
+  }
+  .step-box p {
+    font-size: 12px;
+  }
+}

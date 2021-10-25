@@ -1,0 +1,21 @@
+
+i.custom-icon {
+  color: #f96332 !important;
+  cursor: pointer !important;
+  font-weight: bolder;
+}
+
+.add-icon {
+  border-radius: 50px;
+  border: 2px solid #f96332 !important;
+  padding: 5px;
+}
+
+.ngx-pagination .current {
+  background-color: #f96332 !important;
+}
+
+.invalid-input {
+  font-size: 10px;
+  margin: 0;
+}

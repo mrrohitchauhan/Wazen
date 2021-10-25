@@ -1,0 +1,49 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content d-flex justify-content-center">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">{{ !homePageBannerId ? "Add" : "View" }} Home Page Banner</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="homePageBannerForm" (ngSubmit)="onSubmit()">
+            <div class="row mx-1">
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputImageSource">Image Source</label>
+                  <input type="text" class="form-control" id="inputImageSource" placeholder="ImageSource"
+                         formControlName="imageSource" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputProductID">Product ID</label>
+                  <input type="text" class="form-control" id="inputProductID" placeholder="ProductID"
+                         formControlName="productID" maxlength="40" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputIsActive">IsActive</label>
+                  <input type="text" class="form-control" id="inputIsActive" placeholder="IsActive"
+                         formControlName="isActive">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group float-right">
+                  <button class="btn btn-primary btn-block"
+                          [disabled]="homePageBannerForm.invalid">
+                    {{ !homePageBannerId ? "Add" : "Update" }} Home Page Banner
+                  </button>
+                </div>
+              </div>
+            </div> 
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

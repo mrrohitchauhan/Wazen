@@ -1,0 +1,117 @@
+{
+  "user": [
+    {
+      "username": "ITAdmin",
+      "password": "ITAdmin@123",
+      "result": {
+        "role": "HOD",
+        "token": "eyJyb2xlIjoiSE9EIiwiZGVwYXJ0bWVudCI6IklUIiwidXNlcm5hbWUiOiJJVEFkbWluIn0="
+      }
+    },
+    {
+      "username": "CSAdmin",
+      "password": "CSAdmin@123",
+      "result": {
+        "role": "HOD",
+        "token": "eyJyb2xlIjoiSE9EIiwiZGVwYXJ0bWVudCI6IkNTIiwidXNlcm5hbWUiOiJDU0FkbWluIn0="
+      }
+    },
+    {
+      "username": "tiger",
+      "password": "tiger@123",
+      "result": {
+        "role": "STAFF",
+        "token": "eyJyb2xlIjoiU1RBRkYiLCJkZXBhcnRtZW50IjoiSVQiLCJ1c2VySWQiOiIxIiwidXNlcm5hbWUiOiJ0aWdlciJ9"
+      }
+    },
+    {
+      "username": "ashton",
+      "password": "ashton@123",
+      "result": {
+        "role": "STAFF",
+        "token": "eyJyb2xlIjoiU1RBRkYiLCJkZXBhcnRtZW50IjoiSVQiLCJ1c2VySWQiOiIzIiwidXNlcm5hbWUiOiJhc2h0b24ifQ=="
+      }
+    },
+    {
+      "username": "cedric",
+      "password": "cedric@123",
+      "result": {
+        "role": "STAFF",
+        "token": "eyJyb2xlIjoiU1RBRkYiLCJkZXBhcnRtZW50IjoiQ1MiLCJ1c2VySWQiOiI0IiwidXNlcm5hbWUiOiJjZWRyaWMifQ=="
+      }
+    }
+  ],
+  "menus": {
+    "HOD": [
+      {
+        "path": "/neosoft/staff-management",
+        "title": "Staff Management",
+        "icon": "education_atom",
+        "class": ""
+      },
+      {
+        "path": "/neosoft/leave-management",
+        "title": "Leave Management",
+        "icon": "location_map-big",
+        "class": ""
+      }
+    ],
+    "STAFF": [
+      {
+        "path": "/neosoft/leave-management",
+        "title": "Leave Management1",
+        "icon": "location_map-big",
+        "class": ""
+      }
+    ]
+  },
+  "HOD": {
+    "staffMember": [
+      {
+        "id": 1,
+        "staff_name": "Tiger Nixon",
+        "staff_username": "tiger",
+        "staff_email": "tiger@neosoft.com",
+        "staff_contact": "9112233990",
+        "staff_department": "IT"
+      },
+      {
+        "id": 2,
+        "staff_name": "Garrett Winters",
+        "staff_username": "garrett",
+        "staff_email": "garrett@neosoft.com",
+        "staff_contact": "9132345900",
+        "staff_department": "IT"
+      },
+      {
+        "id": 3,
+        "staff_name": "Ashton Cox",
+        "staff_username": "ashton",
+        "staff_email": "ashton@neosoft.com",
+        "staff_contact": "9235422331",
+        "staff_department": "IT"
+      },
+      {
+        "id": 4,
+        "staff_name": "Cedric Kelly",
+        "staff_username": "cedric",
+        "staff_email": "cedric@neosoft.com",
+        "staff_contact": "91399033333",
+        "staff_department": "CS"
+      }
+    ]
+  },
+  "STAFF": {
+    "leaves": [
+      {
+        "id": "1",
+        "userId": 1,
+        "leave_from": "Tue Oct 05 2021 21:43:04 GMT+0530 (India Standard Time)",
+        "leave_to": "Tue Oct 12 2021 21:43:04 GMT+0530 (India Standard Time)",
+        "leave_reason": "Holidays",
+        "status": "pending",
+        "department": "IT"
+      }
+    ]
+  }
+}

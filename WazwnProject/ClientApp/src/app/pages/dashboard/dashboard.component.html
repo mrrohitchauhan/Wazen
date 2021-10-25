@@ -1,0 +1,751 @@
+<section class="hero bg-sec">
+  <div id="owl" class="bannerslider owl-carousel owl-theme">
+    <div class="item w-100 mb-5" *ngFor="let banner of banners">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+            <img [src]="banner.imageSource" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<div class="item w-100 mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+            <img src="../../../assets/img/demo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <!--<div class="item w-100 mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+            <img src="../../../assets/img/demo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>-->
+  </div>
+  <div class="hero-form">
+    <p class="form-title">Auto Insurance</p>
+    <form>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="National ID / Iqama / 700 Number">
+      </div>
+      <div class="position-relative mb-4 datepicker">
+        <input type="text" class="form-control" id="datepickerInput" name="datepickerInput"
+               placeholder="DOB/CR Expiry Date">
+      </div>
+      <button type="submit" class="btn-main">Get a Quote</button>
+    </form>
+    <div class="claim-selection">
+      <p>Already have an Insurance?</p>
+      <div class="container-filud">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 list-wrap">
+            <div class="list-con" data-bs-toggle="collapse" href="#list-collapse-1">
+              <img src="./assets/img/policy.svg" alt="">
+              <span>Manage Policy</span>
+              <i class='bx bx-chevron-down'></i>
+            </div>
+            <div class="collapse list-dropdown" id="list-collapse-1">
+              <ul>
+                <li> <a href=""> <span> Cancel Policy</span></a></li>
+                <li> <a href=""> <span>Upgrade / Replace Policy</span></a></li>
+                <li> <a href=""> <span>Add/Delete Features</span></a></li>
+                <li> <a href=""> <span> Renew Policy</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 list-wrap">
+            <div class="list-con" data-bs-toggle="collapse" href="#list-collapse-2">
+
+              <img src="./assets/img/claim.svg" alt="">
+              <span>Submit Claim</span>
+              <i class='bx bx-chevron-down'></i>
+            </div>
+            <div class="collapse list-dropdown" id="list-collapse-2">
+              <ul>
+                <li> <a href=""> <span> Cancel Policy</span></a></li>
+                <li> <a href=""> <span>Upgrade / Replace Policy</span></a></li>
+                <li> <a href=""> <span>Add/Delete Features</span></a></li>
+                <li> <a href=""> <span> Renew Policy</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 list-wrap">
+            <div class="list-con" data-bs-toggle="collapse" href="#list-collapse-3">
+
+              <img src="./assets/img/orders.svg" alt="">
+              <span>My Orders</span>
+              <i class='bx bx-chevron-down invisible'></i>
+            </div>
+            <!-- <div class="collapse list-dropdown" id="list-collapse-3">
+                <ul>
+                    <li> <a href=""> <span> Cancel Policy</span></a></li>
+                    <li> <a href=""> <span>Upgrade / Replace Policy</span></a></li>
+                    <li> <a href=""> <span>Add/Delete Features</span></a></li>
+                    <li> <a href=""> <span> Renew Policy</span></a></li>
+                </ul> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- steps -->
+<section class="steps">
+  <div class="container">
+    <h4>Get your auto insurance in 3 easy steps</h4>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-3 d-flex mb-3 mb-lg-0">
+        <div class="step-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 59.268 58.97">
+            <g id="Group_44" data-name="Group 44" transform="translate(-2.5 -2.8)">
+              <path id="Path_88" data-name="Path 88"
+                    d="M43,55.4l-4.8,1.373a4.024,4.024,0,0,1-1.248.187,4.315,4.315,0,0,1-3.245-1.5,4.473,4.473,0,0,1-1-3.495l.374-2.5H15.48a1.971,1.971,0,0,1-2-2,2.011,2.011,0,0,1,2-2H34.013a5.456,5.456,0,0,0,.5-.624L48.49,28.884V11.536a3.343,3.343,0,0,0-3.37-3.307H40.066V5.983A3.156,3.156,0,0,0,36.884,2.8a3.1,3.1,0,0,0-3.12,3.183V8.229H28.709V5.983a3.183,3.183,0,0,0-6.365,0V8.229H17.289V5.983A3.118,3.118,0,0,0,14.107,2.8a3.156,3.156,0,0,0-3.183,3.183V8.229H5.87A3.384,3.384,0,0,0,2.5,11.536V58.4a3.4,3.4,0,0,0,3.37,3.37H45.183a3.4,3.4,0,0,0,3.37-3.37V50.1l-3.495,3.994A4.847,4.847,0,0,1,43,55.4ZM15.48,19.961H35.511a1.971,1.971,0,0,1,2,2,2.011,2.011,0,0,1-2,2H15.48a2,2,0,0,1,0-3.994Zm0,12.792H35.511a1.971,1.971,0,0,1,2,2,2.011,2.011,0,0,1-2,2H15.48a2,2,0,0,1,0-3.994Z"
+                    transform="translate(0 0)" fill="#2c3e50" />
+              <path id="Path_89" data-name="Path 89"
+                    d="M55.992,78.114a1.143,1.143,0,0,0,1.5,1.248l4.743-1.435a1.359,1.359,0,0,0,.5-.312l1.373-1.56L58.425,71l-1.373,1.56a.8.8,0,0,0-.25.624Z"
+                    transform="translate(-20.107 -25.642)" fill="#2c3e50" />
+              <path id="Path_90" data-name="Path 90"
+                    d="M62.6,59.954l5.679,5.055L80.01,51.592,74.332,46.6Z"
+                    transform="translate(-22.596 -16.468)" fill="#2c3e50" />
+              <path id="Path_91" data-name="Path 91"
+                    d="M92.087,42.415,88.094,38.92a1.168,1.168,0,0,0-1.622.062L84.1,41.666l5.679,4.992,2.371-2.683A1.094,1.094,0,0,0,92.087,42.415Z"
+                    transform="translate(-30.68 -13.468)" fill="#2c3e50" />
+            </g>
+          </svg>
+
+          <p>Complete our short form </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex mb-3 mb-lg-0">
+        <div class="step-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 76.909 60.443">
+            <path id="Path_92" data-name="Path 92"
+                  d="M55.1,68.752a14.525,14.525,0,0,0,11.134,6.3q.447.026.9.026t.9-.026a14.524,14.524,0,0,0,11.136-6.3,15.183,15.183,0,0,0,2.056-13.211L69.4,17.205a2.37,2.37,0,0,0-4.527-.009l-.912,2.958H50.921a7.811,7.811,0,0,0-14.935,0H22.947L22.035,17.2a2.37,2.37,0,0,0-4.527.009L5.684,55.541A15.183,15.183,0,0,0,7.74,68.752a14.524,14.524,0,0,0,11.136,6.3q.445.026.9.026c.3,0,.6-.009.9-.026a14.525,14.525,0,0,0,11.134-6.3,15.18,15.18,0,0,0,2.057-13.211l-9.5-30.8H35.987a7.812,7.812,0,0,0,14.934,0H62.545l-9.5,30.8A15.18,15.18,0,0,0,55.1,68.752ZM29.477,56.893c.061.2.1.4.148.6H9.92c.05-.2.086-.4.148-.6l9.7-31.468ZM43.454,25.672a3.225,3.225,0,1,1,3.225-3.225,3.225,3.225,0,0,1-3.225,3.225ZM57.43,56.893l9.7-31.468,9.7,31.468c.062.2.1.4.148.6h-19.7C57.332,57.291,57.37,57.091,57.43,56.893Z"
+                  transform="translate(-4.999 -14.632)" fill="#34495e" />
+          </svg>
+
+          <p>Get matched with top-rated providers </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex mb-3 mb-lg-0">
+        <div class="step-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 54.763 65.936">
+            <g id="Group_45" data-name="Group 45" transform="translate(-6.82 -2.499)">
+              <path id="Path_93" data-name="Path 93"
+                    d="M40.724,54.53a5.476,5.476,0,0,0,5.387-4.542,10.174,10.174,0,0,1-1.987.2h-8.85a5.485,5.485,0,0,0,5.36,4.344Z"
+                    transform="translate(8.331 13.905)" fill="#34495e" />
+              <path id="Path_94" data-name="Path 94"
+                    d="M16.731,54.529a5.485,5.485,0,0,0,5.36-4.344H13.24a10.275,10.275,0,0,1-1.987-.2,5.476,5.476,0,0,0,5.387,4.54Z"
+                    transform="translate(1.298 13.905)" fill="#34495e" />
+              <path id="Path_95" data-name="Path 95"
+                    d="M55.659,39.146h1.812a1.292,1.292,0,0,0,1.293-1.293V35.032a1.293,1.293,0,1,0-2.586,0V36.56H54.32l-.91-5-2.186,2.429.468,2.575H15.3l1.281-7.042a7.164,7.164,0,0,1,7.052-5.886H32.2v3.055h-.118a1.293,1.293,0,0,0,0,2.586h2.822a1.293,1.293,0,0,0,0-2.586h-.119V23.633H35.9q-.714-1.268-1.323-2.586H23.634a9.747,9.747,0,0,0-9.6,8.009l-1.364,7.5h-1.86V35.032a1.293,1.293,0,1,0-2.586,0v2.821a1.292,1.292,0,0,0,1.293,1.293h1.814L8.113,43.973a7.849,7.849,0,0,0-1.293,4.37,7.733,7.733,0,0,0,7.718,7.731H52.456a7.8,7.8,0,0,0,6.425-12.1ZM17.977,50.424A4.111,4.111,0,1,1,22.1,46.313,4.113,4.113,0,0,1,17.977,50.424Zm21.16,0H27.855a1.293,1.293,0,1,1,0-2.586H39.137a1.293,1.293,0,0,1,0,2.586Zm0-5.642H27.855a1.293,1.293,0,1,1,0-2.586H39.137a1.293,1.293,0,0,1,0,2.586ZM49,50.424a4.111,4.111,0,1,1,4.124-4.111A4.113,4.113,0,0,1,49,50.424Z"
+                    transform="translate(0 5.431)" fill="#34495e" />
+              <path id="Path_96" data-name="Path 96"
+                    d="M54.5,5.359l-12.7-2.831a1.343,1.343,0,0,0-.556,0l-12.7,2.831A1.274,1.274,0,0,0,27.55,6.613v3.84a35.3,35.3,0,0,0,9.075,23.671l3.943,4.383a1.3,1.3,0,0,0,1.926,0l3.943-4.383a35.3,35.3,0,0,0,9.075-23.671V6.613A1.274,1.274,0,0,0,54.5,5.359Zm-7.078,12.7L41.08,25.11a1.293,1.293,0,0,1-1.77.144l-3.524-2.821A1.293,1.293,0,0,1,37.4,20.415l2.571,2.058L45.5,16.328a1.293,1.293,0,0,1,1.922,1.73Z"
+                    transform="translate(6.07 0)" fill="#34495e" />
+            </g>
+          </svg>
+
+          <p>Compare and choose the right policy for you</p>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+<!-- claim submission -->
+<section class="bg-sec claim">
+  <div class="container">
+    <div class="row content">
+      <div class="col-md-6 claim-img">
+        <img src="assets/img/men-with-car.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-6 claim-content">
+        <h5>Submit your claim</h5>
+        <p>
+          If you encounter any issue and want to submit a claim, our dedicated claims team can help you
+          anytime with our hassle-free claims process, anywhere. Just tell us what happened and we will
+          take
+          it from there.
+        </p>
+        <p> For endorsement or cancelation requests click <a href="#">Here</a>. </p>
+        <p> For claims requests: Fill out this form or call 800 WAZEN </p>
+        <p>
+          and one of our customer service representatives will guide you through
+          your claim.
+        </p>
+
+        <button class="btn btn-main mt-4">Submit a Claim</button>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- partners -->
+<section class=" bg-sec partners">
+  <div class="container">
+    <h4>Our Partners</h4>
+    <div id="partners-owls" class="partners-owl owl-carousel owl-theme">
+      <div class="item">
+        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image1.png"
+             alt="">
+      </div>
+      <div class="item">
+        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png"
+             alt="">
+      </div>
+      <div class="item">
+        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png"
+             alt="">
+      </div>
+      <div class="item">
+        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png"
+             alt="">
+      </div>
+      <div class="item">
+        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png"
+             alt="">
+      </div>
+      <div class="item">
+        <img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png"
+             alt="">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- faq -->
+<section class=" bg-sec faq">
+  <div class="container">
+    <h4>Frequently Asked Questions</h4>
+    <div class="wrap-accordian">
+      <div class="wrap-panel">
+        <a href="#" class="wrap-toggle">
+          <p class="wrap-question">Lorem ipsum dolor sit amet, consectetur </p><i class='bx bx-plus'></i>
+        </a>
+        <div class="wrap-ans" style="display: none;">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus porro exercitationem
+            quasi
+            minus debitis culpa, voluptates repellendus tempora veritatis dolorum?
+          </p>
+        </div>
+
+      </div>
+      <div class="wrap-panel">
+        <a href="#" class="wrap-toggle">
+          <p class="wrap-question">Lorem ipsum dolor sit amet, consectetur </p><i class='bx bx-plus'></i>
+        </a>
+        <div class="wrap-ans" style="display: none;">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus porro exercitationem
+            quasi
+            minus debitis culpa, voluptates repellendus tempora veritatis dolorum?
+          </p>
+        </div>
+
+      </div>
+      <div class="wrap-panel">
+        <a href="#" class="wrap-toggle">
+          <p class="wrap-question">Lorem ipsum dolor sit amet, consectetur </p><i class='bx bx-plus'></i>
+        </a>
+        <div class="wrap-ans" style="display: none;">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus porro exercitationem
+            quasi
+            minus debitis culpa, voluptates repellendus tempora veritatis dolorum?
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- login popup -->
+<div class="modal fade" id="account-popup" tabindex="-1" aria-labelledby="account-popup-Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="profile-container">
+          <ul class="nav nav-tabs" id="profile-wrap" role="tablist">
+            <li class="nav-item " role="presentation">
+              <a class="nav-link active " id="login-tab" data-bs-toggle="tab" href="#login-contanier"
+                 role="tab" aria-controls="login-contanier" aria-selected="true">Login</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link " id="signup-tab" data-bs-toggle="tab" href="#signup-contanier"
+                 role="tab" aria-controls="transactions" aria-selected="false">Sign Up</a>
+            </li>
+          </ul>
+          <div class="card tab-content">
+            <div class="tab-pane fade  show active" id="login-contanier" role="tabpanel"
+                 aria-labelledby="login-tab">
+              <div class="container my-auto py-3">
+                <div class="row">
+                  <div class="col-11 col-lg-9 col-xl-7 mx-auto text-center">
+                    <form class="pb-3">
+                      <div class="mb-3">
+                        <input type="email" class="form-control"
+                               placeholder="Enter Your Email">
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <input type="password" id="loginPassword" class="form-control"
+                               placeholder="Enter Your Password">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="loginPassword-icon"
+                             width="24.831" height="15.63" viewBox="0 0 28.831 17.63">
+                          <g id="Group_1002" data-name="Group 1002"
+                             transform="translate(-309.231 -477.628)">
+                            <path id="Path_650" data-name="Path 650"
+                                  d="M319.88,462.127a16.012,16.012,0,0,1,5.845,5.886.578.578,0,0,1,0,.595,15.832,15.832,0,0,1-13.822,8.023h-.014a15.827,15.827,0,0,1-13.808-8.023.578.578,0,0,1,0-.595A15.817,15.817,0,0,1,311.89,460h.014A15.8,15.8,0,0,1,319.88,462.127Z"
+                                  transform="translate(11.744 18.128)" fill="none"
+                                  stroke="#707070" stroke-width="1" fill-rule="evenodd" />
+                            <g id="Ellipse_43" data-name="Ellipse 43"
+                               transform="translate(319.02 481.943)" fill="#fff"
+                               stroke="#707070" stroke-width="1">
+                              <circle cx="4.5" cy="4.5" r="4.5" stroke="none" />
+                              <circle cx="4.5" cy="4.5" r="4" fill="none" />
+                            </g>
+                          </g>
+                        </svg>
+
+                      </div>
+                      <button type="submit" class="btn-main mt-3">Sign In</button>
+                    </form>
+                    <a href="#" data-bs-toggle="modal"
+                       data-bs-target="#forgot-password-popup">
+                      <span class="text-2">
+                        Forgot
+                        Password?
+                      </span>
+                    </a>
+                    <div class="d-flex align-items-center my-3">
+                      <hr class="flex-grow-1">
+                      <span class="mx-3 text-2">Or login with</span>
+                      <hr class="flex-grow-1">
+                    </div>
+                    <div class="d-flex  flex-column align-items-center my-5">
+                      <ul class="social-icons social-icons-rounded">
+                        <li class="social-facebook">
+                          <a href="#">
+                            <svg id="Group_113" data-name="Group 113"
+                                 xmlns="http://www.w3.org/2000/svg" width="48"
+                                 height="48" viewBox="0 0 48 48">
+                              <circle id="Ellipse_31" data-name="Ellipse 31" cx="24"
+                                      cy="24" r="24" fill="#18519b" />
+                              <path id="Path_158" data-name="Path 158"
+                                    d="M75.461,138.947h-3.1v9.991h-4.6v-9.991H65.564v-3.911h2.189v-2.531c0-1.81.86-4.645,4.644-4.645l3.409.015v3.8H73.332a.937.937,0,0,0-.976,1.066v2.3h3.507Zm.536.117"
+                                    transform="translate(-47.26 -114.596)"
+                                    fill="#fff" />
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="social-google">
+                          <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="47"
+                                 height="48" viewBox="0 0 47 48">
+                              <g id="Group_111" data-name="Group 111"
+                                 transform="translate(-0.498)">
+                                <g id="Ellipse_33" data-name="Ellipse 33"
+                                   transform="translate(0.498)" fill="#fff"
+                                   stroke="#d0d0d0" stroke-width="1">
+                                  <ellipse cx="23.5" cy="24" rx="23.5" ry="24"
+                                           stroke="none" />
+                                  <ellipse cx="23.5" cy="24" rx="23" ry="23.5"
+                                           fill="none" />
+                                </g>
+                                <g id="Group_110" data-name="Group 110"
+                                   transform="translate(14.386 14.051)">
+                                  <g id="Group_109" data-name="Group 109"
+                                     transform="translate(0 0)">
+                                    <path id="Path_160" data-name="Path 160"
+                                          d="M20.064,5.38a8.452,8.452,0,0,1,1.619-2.33A9.731,9.731,0,0,1,35.1,2.365c.146.126.182.2.023.355-.817.8-1.621,1.613-2.43,2.421-.083.083-.139.184-.286.049a5.6,5.6,0,0,0-7.529.168,6.219,6.219,0,0,0-1.618,2.47c-.051-.033-.1-.063-.151-.1Z"
+                                          transform="translate(-19.013 0)"
+                                          fill="#d7282a" fill-rule="evenodd" />
+                                    <path id="Path_161" data-name="Path 161"
+                                          d="M23.1,222.194a6.534,6.534,0,0,0,1.195,2.039A5.74,5.74,0,0,0,29.4,226.19a6.184,6.184,0,0,0,2.615-.911c.077.069.151.143.232.207q1.415,1.1,2.831,2.206a8.106,8.106,0,0,1-3.652,2,9.822,9.822,0,0,1-8.932-1.8,9.055,9.055,0,0,1-2.582-3.219Z"
+                                          transform="translate(-18.869 -210.553)"
+                                          fill="#45ac43" fill-rule="evenodd" />
+                                    <path id="Path_162" data-name="Path 162"
+                                          d="M192.189,160.217q-1.416-1.1-2.831-2.206c-.081-.064-.155-.138-.232-.207a4.954,4.954,0,0,0,1.523-1.8,6.255,6.255,0,0,0,.331-.907c.064-.213.044-.3-.22-.294-1.571.013-3.142.007-4.713.007-.333,0-.333,0-.333-.344,0-1.065.005-2.13,0-3.195,0-.205.034-.284.265-.284q4.347.013,8.694,0c.156,0,.255.011.282.2a10.694,10.694,0,0,1-1.255,7.193A7.181,7.181,0,0,1,192.189,160.217Z"
+                                          transform="translate(-175.979 -143.079)"
+                                          fill="#5d7fbe" fill-rule="evenodd" />
+                                    <path id="Path_163" data-name="Path 163"
+                                          d="M4.228,108.954l-3.185,2.473a8.821,8.821,0,0,1-.957-3.078A9.638,9.638,0,0,1,.9,102.967c.044-.094.1-.183.148-.274l3.05,2.348c.048.037.1.066.151.1A6.161,6.161,0,0,0,4.228,108.954Z"
+                                          transform="translate(0 -97.313)"
+                                          fill="#f4c300" fill-rule="evenodd" />
+                                  </g>
+                                </g>
+                              </g>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="social-twitter">
+                          <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48"
+                                 height="48" viewBox="0 0 48 48">
+                              <g id="twitter_2_" data-name="twitter(2)"
+                                 transform="translate(-0.001)">
+                                <circle id="Ellipse_34" data-name="Ellipse 34"
+                                        cx="24" cy="24" r="24"
+                                        transform="translate(0.001 0)" fill="#55acee" />
+                                <g id="Group_577" data-name="Group 577"
+                                   transform="translate(13.065 16.589)">
+                                  <path id="Path_651" data-name="Path 651"
+                                        d="M48.726,36.3a9.67,9.67,0,0,1-2.784.762,4.86,4.86,0,0,0,2.131-2.681A9.7,9.7,0,0,1,45,35.558a4.851,4.851,0,0,0-8.259,4.421,13.758,13.758,0,0,1-9.99-5.064,4.852,4.852,0,0,0,1.5,6.471,4.812,4.812,0,0,1-2.2-.607c0,.021,0,.041,0,.061a4.849,4.849,0,0,0,3.888,4.752,4.865,4.865,0,0,1-2.189.084,4.852,4.852,0,0,0,4.527,3.366A9.784,9.784,0,0,1,25.1,51.048,13.783,13.783,0,0,0,46.321,39.436c0-.21,0-.419-.014-.627A9.828,9.828,0,0,0,48.726,36.3Z"
+                                        transform="translate(-25.103 -34.028)"
+                                        fill="#f1f2f2" />
+                                </g>
+                              </g>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <p class="join-now-label text-2">
+                      New to Wazen? <a href="">
+                        Join Wazen
+                        Now
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade " id="signup-contanier" role="tabpanel"
+                 aria-labelledby="signup-tab">
+              <div class="container">
+                <div class="row justify-content-center text-center">
+                  <div class="col-11 col-lg-9 col-xl-8 mx-auto text-center">
+                    <form action="">
+                      <div class="form-row d-flex mb-3">
+                        <div class="form-group col-md-2">
+                          <select class="form-control">
+                            <option selected="">Mr</option>
+                            <option>Mrs</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-10">
+                          <input type="text" class="form-control"
+                                 placeholder="First name*">
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Last name">
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" class="form-control"
+                               placeholder="National ID / Iqama / 700 Number">
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" class="form-control"
+                               placeholder="Enter your email">
+                      </div>
+                      <div class="form-row d-flex mb-3">
+                        <div class="form-group col-md-2">
+                          <select class="form-control">
+                            <option selected="">+966</option>
+                            <option>+96</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-10">
+                          <input type="text" class="form-control"
+                                 placeholder="00 0000 000 0000">
+                        </div>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <input type="password" id="password" class="form-control"
+                               placeholder="Enter your password">
+                        <div class="open-eye opacity-50" id="pass-icon">
+                          <img src="./assets/img/eye-open.png" alt="">
+                        </div>
+                      </div>
+                      <div class="mb-3 position-relative ">
+                        <input type="password" id="conpassword" class="form-control"
+                               placeholder="Confirm your password">
+                        <div class="open-eye opacity-50" id="conpass-icon">
+                          <img src="./assets/img/eye-open.png" alt="">
+                        </div>
+                      </div>
+                      <div class="conformation-checkbox mb-3">
+                        <label class="customcheck">
+                          By creating an
+                          account, I agree to Wazen’s. Terms & Conditions and Privacy
+                          Policy.
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                      <div class="d-flex justify-content-center py-4">
+                        <button type="submit" class="btn-main ">Join to Wazen</button>
+
+                      </div>
+                    </form>
+                    <div class="d-flex align-items-center my-3">
+                      <hr class="flex-grow-1">
+                      <span class="mx-3 text-2">Or login with</span>
+                      <hr class="flex-grow-1">
+                    </div>
+                    <div class="d-flex  flex-column align-items-center my-5">
+                      <ul class="social-icons social-icons-rounded">
+                        <li class="social-facebook">
+                          <a href="#">
+                            <svg id="Group_113" data-name="Group 113"
+                                 xmlns="http://www.w3.org/2000/svg" width="48"
+                                 height="48" viewBox="0 0 48 48">
+                              <circle id="Ellipse_31" data-name="Ellipse 31" cx="24"
+                                      cy="24" r="24" fill="#18519b" />
+                              <path id="Path_158" data-name="Path 158"
+                                    d="M75.461,138.947h-3.1v9.991h-4.6v-9.991H65.564v-3.911h2.189v-2.531c0-1.81.86-4.645,4.644-4.645l3.409.015v3.8H73.332a.937.937,0,0,0-.976,1.066v2.3h3.507Zm.536.117"
+                                    transform="translate(-47.26 -114.596)"
+                                    fill="#fff" />
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="social-google">
+                          <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="47"
+                                 height="48" viewBox="0 0 47 48">
+                              <g id="Group_111" data-name="Group 111"
+                                 transform="translate(-0.498)">
+                                <g id="Ellipse_33" data-name="Ellipse 33"
+                                   transform="translate(0.498)" fill="#fff"
+                                   stroke="#d0d0d0" stroke-width="1">
+                                  <ellipse cx="23.5" cy="24" rx="23.5" ry="24"
+                                           stroke="none" />
+                                  <ellipse cx="23.5" cy="24" rx="23" ry="23.5"
+                                           fill="none" />
+                                </g>
+                                <g id="Group_110" data-name="Group 110"
+                                   transform="translate(14.386 14.051)">
+                                  <g id="Group_109" data-name="Group 109"
+                                     transform="translate(0 0)">
+                                    <path id="Path_160" data-name="Path 160"
+                                          d="M20.064,5.38a8.452,8.452,0,0,1,1.619-2.33A9.731,9.731,0,0,1,35.1,2.365c.146.126.182.2.023.355-.817.8-1.621,1.613-2.43,2.421-.083.083-.139.184-.286.049a5.6,5.6,0,0,0-7.529.168,6.219,6.219,0,0,0-1.618,2.47c-.051-.033-.1-.063-.151-.1Z"
+                                          transform="translate(-19.013 0)"
+                                          fill="#d7282a" fill-rule="evenodd" />
+                                    <path id="Path_161" data-name="Path 161"
+                                          d="M23.1,222.194a6.534,6.534,0,0,0,1.195,2.039A5.74,5.74,0,0,0,29.4,226.19a6.184,6.184,0,0,0,2.615-.911c.077.069.151.143.232.207q1.415,1.1,2.831,2.206a8.106,8.106,0,0,1-3.652,2,9.822,9.822,0,0,1-8.932-1.8,9.055,9.055,0,0,1-2.582-3.219Z"
+                                          transform="translate(-18.869 -210.553)"
+                                          fill="#45ac43" fill-rule="evenodd" />
+                                    <path id="Path_162" data-name="Path 162"
+                                          d="M192.189,160.217q-1.416-1.1-2.831-2.206c-.081-.064-.155-.138-.232-.207a4.954,4.954,0,0,0,1.523-1.8,6.255,6.255,0,0,0,.331-.907c.064-.213.044-.3-.22-.294-1.571.013-3.142.007-4.713.007-.333,0-.333,0-.333-.344,0-1.065.005-2.13,0-3.195,0-.205.034-.284.265-.284q4.347.013,8.694,0c.156,0,.255.011.282.2a10.694,10.694,0,0,1-1.255,7.193A7.181,7.181,0,0,1,192.189,160.217Z"
+                                          transform="translate(-175.979 -143.079)"
+                                          fill="#5d7fbe" fill-rule="evenodd" />
+                                    <path id="Path_163" data-name="Path 163"
+                                          d="M4.228,108.954l-3.185,2.473a8.821,8.821,0,0,1-.957-3.078A9.638,9.638,0,0,1,.9,102.967c.044-.094.1-.183.148-.274l3.05,2.348c.048.037.1.066.151.1A6.161,6.161,0,0,0,4.228,108.954Z"
+                                          transform="translate(0 -97.313)"
+                                          fill="#f4c300" fill-rule="evenodd" />
+                                  </g>
+                                </g>
+                              </g>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="social-twitter">
+                          <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48"
+                                 height="48" viewBox="0 0 48 48">
+                              <g id="twitter_2_" data-name="twitter(2)"
+                                 transform="translate(-0.001)">
+                                <circle id="Ellipse_34" data-name="Ellipse 34"
+                                        cx="24" cy="24" r="24"
+                                        transform="translate(0.001 0)" fill="#55acee" />
+                                <g id="Group_577" data-name="Group 577"
+                                   transform="translate(13.065 16.589)">
+                                  <path id="Path_651" data-name="Path 651"
+                                        d="M48.726,36.3a9.67,9.67,0,0,1-2.784.762,4.86,4.86,0,0,0,2.131-2.681A9.7,9.7,0,0,1,45,35.558a4.851,4.851,0,0,0-8.259,4.421,13.758,13.758,0,0,1-9.99-5.064,4.852,4.852,0,0,0,1.5,6.471,4.812,4.812,0,0,1-2.2-.607c0,.021,0,.041,0,.061a4.849,4.849,0,0,0,3.888,4.752,4.865,4.865,0,0,1-2.189.084,4.852,4.852,0,0,0,4.527,3.366A9.784,9.784,0,0,1,25.1,51.048,13.783,13.783,0,0,0,46.321,39.436c0-.21,0-.419-.014-.627A9.828,9.828,0,0,0,48.726,36.3Z"
+                                        transform="translate(-25.103 -34.028)"
+                                        fill="#f1f2f2" />
+                                </g>
+                              </g>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <p class="join-now-label text-2">
+                      Already have an account?<a href="">
+                        Log
+                        In
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- forgot password popup -->
+<div class="modal fade" id="forgot-password-popup" tabindex="" aria-labelledby="account-popup-Label"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="profile-container">
+          <!-- <ul class="nav nav-tabs" id="profile-wrap" role="tablist">
+              <li class="nav-item " role="presentation">
+                  <a class="nav-link " id="login-tab" data-bs-toggle="tab" href="#login-contanier"
+                      role="tab" aria-controls="login-contanier" aria-selected="true">Login</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <a class="nav-link " id="signup-tab" data-bs-toggle="tab" href="#signup-contanier"
+                      role="tab" aria-controls="transactions" aria-selected="false">Sign Up</a>
+              </li>
+          </ul> -->
+          <div class="card tab-content">
+            <div class="tab-pane fade  show active" id="login-contanier" role="tabpanel"
+                 aria-labelledby="login-tab">
+              <div class="container my-auto py-3">
+                <div class="row">
+                  <div class="col-11 col-lg-9 col-xl-7 mx-auto text-center">
+                    <p class="text-sec">Forgot Password?</p>
+                    <form class="pb-3">
+                      <div class="mb-3">
+                        <input type="email" class="form-control"
+                               placeholder="Enter Your Email">
+                      </div>
+                      <button type="submit" class="btn-main mt-3" data-bs-toggle="modal"
+                              data-bs-target="#verification-code-popup">
+                        Send
+                      </button>
+                    </form>
+                    <p class="join-now-label text-2">New to Wazen?<a href=""> Sign Up</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- verification code popup -->
+<div class="modal fade" id="verification-code-popup" tabindex="-1" aria-labelledby="account-popup-Label"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="profile-container">
+          <div class="card tab-content">
+            <div class="tab-pane fade  show active" id="login-contanier" role="tabpanel"
+                 aria-labelledby="login-tab">
+              <div class="container my-auto py-3">
+                <div class="row">
+                  <div class="col-11 col-lg-9 col-xl-8 mx-auto text-center">
+                    <div class="mb-4">
+                      <svg id="Group_588" data-name="Group 588"
+                           xmlns="http://www.w3.org/2000/svg" width="80.311" height="80.292"
+                           viewBox="0 0 113.311 114.292">
+                        <path id="Path_640" data-name="Path 640"
+                              d="M10,66.146c0,31.5,25.426,57.146,56.655,57.146h0c31.23,0,56.655-25.646,56.655-57.146h0C123.311,34.646,97.885,9,66.655,9h0C35.426,9,10,34.646,10,66.146Zm27.775-2.788a6.136,6.136,0,0,1,8.844,0l8.153,8.223a2.987,2.987,0,0,0,4.146,0l10.309-10.4L86.692,43.567a6.136,6.136,0,0,1,8.844,0,6.264,6.264,0,0,1,0,8.92L61.266,87.053a6.136,6.136,0,0,1-8.844,0L37.775,72.279A6.265,6.265,0,0,1,37.775,63.359Z"
+                              transform="translate(-10 -9)" fill="#06aecc" />
+                      </svg>
+
+                    </div>
+                    <h4 class="text-sec fw-6">Email has been send</h4>
+                    <p class="text-2 my-4">
+                      Please Check the Inbox and Click at the Received link
+                      to
+                      reset Password
+                    </p>
+                    <form class="pb-3">
+                      <div class="mb-3">
+                        <input type="email" class="form-control"
+                               placeholder="Enter verification code">
+                      </div>
+                      <p class="join-now-label text-2  mt-4">
+                        Don’t receive the link? <a href="">
+                          Resend
+                        </a>
+                      </p>
+
+                      <button type="submit" class="btn-main mt-3" data-bs-toggle="modal"
+                              data-bs-target="#create-password-popup">
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Create New Password popup -->
+<div class="modal fade" id="create-password-popup" tabindex="-1" aria-labelledby="account-popup-Label"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="profile-container">
+          <div class="card tab-content">
+            <div class="tab-pane fade  show active" id="login-contanier" role="tabpanel"
+                 aria-labelledby="login-tab">
+              <div class="container my-auto py-3">
+                <div class="row">
+                  <div class="col-11 col-lg-9 col-xl-8 mx-auto text-center">
+                    <div class="mb-4">
+                      <svg id="Group_588" data-name="Group 588"
+                           xmlns="http://www.w3.org/2000/svg" width="80.311" height="80.292"
+                           viewBox="0 0 113.311 114.292">
+                        <path id="Path_640" data-name="Path 640"
+                              d="M10,66.146c0,31.5,25.426,57.146,56.655,57.146h0c31.23,0,56.655-25.646,56.655-57.146h0C123.311,34.646,97.885,9,66.655,9h0C35.426,9,10,34.646,10,66.146Zm27.775-2.788a6.136,6.136,0,0,1,8.844,0l8.153,8.223a2.987,2.987,0,0,0,4.146,0l10.309-10.4L86.692,43.567a6.136,6.136,0,0,1,8.844,0,6.264,6.264,0,0,1,0,8.92L61.266,87.053a6.136,6.136,0,0,1-8.844,0L37.775,72.279A6.265,6.265,0,0,1,37.775,63.359Z"
+                              transform="translate(-10 -9)" fill="#06aecc" />
+                      </svg>
+
+                    </div>
+                    <h4 class="text-sec fw-6">Create New Password</h4>
+                    <p class="text-2 my-4">
+                      Your New Password Must be Different from Previously
+                      Used Password
+                    </p>
+                    <form class="pb-3">
+                      <div class="mb-3">
+                        <input type="password" class="form-control"
+                               placeholder="Enter New Password">
+                      </div>
+                      <div class="mb-3">
+                        <input type="password" class="form-control"
+                               placeholder="Enter New Password">
+                      </div>
+                      <button type="submit" class="btn-main mt-3">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- back to top -->
+<a id="back-to-top"><i class='bx bx-chevron-up'></i></a>

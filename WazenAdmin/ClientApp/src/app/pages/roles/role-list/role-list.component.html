@@ -1,0 +1,54 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header d-flex justify-content-center align-items-center">
+          <h4 class="card-title p-2 w-100">Roles</h4>
+          <!--<div class="input-group no-border w-25">
+            <input type="text"
+                   [(ngModel)]="searchText"
+                   class="form-control"
+                   placeholder="Search..." />
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <i class="now-ui-icons ui-1_zoom-bold"></i>
+              </div>
+            </div>
+          </div>-->
+          <i class="now-ui-icons ui-1_simple-add add-icon custom-icon mr-3" routerLink="/wazen/add-role"></i>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <tr>
+                  <th>Sr No.</th>
+                  <th>Role Name</th>
+                  <th>Role Arabic Name</th>
+                  <th>Description</th>
+                  <th>isActive</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="users.length">
+                <tr *ngFor="let u of users; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ u.roleName }}</td>
+                  <td>{{ u.roleArabicName }}</td>
+                  <td>{{ u.description }}</td>
+                  <td>{{ u.isActive }}</td>
+                  <td>
+                    <i class="now-ui-icons education_glasses custom-icon mr-3"
+                      [routerLink]="['/wazen/add-role', u.id]"></i>
+                    <i class="now-ui-icons ui-1_simple-remove custom-icon" (click)="deleteRole(u.id)"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

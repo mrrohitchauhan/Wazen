@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+@import './assets/vendors/owlcarousel/assets/owl.carousel.min.css';
+@import './assets/vendors/owlcarousel/assets/owl.theme.default.min.css';
+@import './assets/vendors/bootstrap/css/bootstrap.min.css';
+@import './assets/vendors/datepicker.css';
+@import './assets/sass/base.css';

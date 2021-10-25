@@ -1,0 +1,20 @@
+<form [formGroup]="roleForm" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Role name</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email"
+             formControlName="roleName" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)" >
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Role Arabic Name</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password"
+             formControlName="roleArabicName" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Description</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"
+           formControlName="description" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+  </div>
+  <button type="submit" [disabled]="roleForm.invalid" class="btn btn-primary">{{ !roleId ? "Add" : "Update" }} role</button>
+</form>

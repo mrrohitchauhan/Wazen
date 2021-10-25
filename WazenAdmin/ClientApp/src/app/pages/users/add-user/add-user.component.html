@@ -1,0 +1,111 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content d-flex justify-content-center">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">{{ !Id ? "Add" : "View" }} Role</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="row mx-1">
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputEmail4">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name"
+                    maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputPassword4">UserName</label>
+                  <input type="text" class="form-control" id="username" placeholder="UserName"
+                    formControlName="username" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email"
+                    maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Contact number</label>
+                  <input type="text" class="form-control" id="ContactNo" placeholder="Contact number"
+                    formControlName="contactNo" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Designation</label>
+                  <input type="text" class="form-control" id="Designation" placeholder="Designation"
+                    formControlName="designation" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Password</label>
+                  <input type="password" class="form-control" id="Password" placeholder="Password"
+                    formControlName="password" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Modified By</label>
+                  <input type="number" class="form-control" id="ModifiedBy" placeholder="Modified By"
+                    formControlName="modifiedBy" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Modified On</label>
+                  <input type="date" class="form-control" id="ModifiedOn" placeholder="Modified On"
+                    formControlName="modifiedOn" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Date</label>
+                  <input type="date" class="form-control" id="Date" placeholder="Date" formControlName="date"
+                    maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">CreatedBy</label>
+                  <input type="number" class="form-control" id="CreatedBy" placeholder="CreatedBy"
+                    formControlName="createdBy" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">CreatedOn</label>
+                  <input type="date" class="form-control" id="CreatedOn" placeholder="CreatedOn"
+                    formControlName="createdOn" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Is Active</label>
+                  <input type="checkbox" class="form-control" id="IsActive" placeholder="Is Active"
+                    formControlName="isActive" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group float-right">
+                  <button type="submit" [disabled]="userForm.invalid"
+                    class="btn btn-primary btn-block">{{ !Id ? "Add" : "Update" }} user</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

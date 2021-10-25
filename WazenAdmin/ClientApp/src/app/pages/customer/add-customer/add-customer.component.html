@@ -1,0 +1,160 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content d-flex justify-content-center">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">{{ !customerId ? "Add" : "View" }} Customer</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+            <div class="row mx-1">
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputPassword4">First Name (EN)</label>
+                  <input type="text" class="form-control" id="inputPassword4" placeholder="First Name (EN)"
+                    formControlName="englishFirstName" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Middle Name (EN)</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Middle Name (EN)"
+                    formControlName="englishMiddleName" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Last Name (EN)</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Last Name (EN)"
+                    formControlName="englishLastName" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+
+              <div class="col-md-6 pl-1">
+                <div class="form-group ">
+                  <label for="inputAddress">First Name (AR)</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="First Name (AR)"
+                    formControlName="arabicFirstName" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Middle Name (AR)</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Middle Name (AR)"
+                    formControlName="arabicMiddleName" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Last Name (AR)</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Last Name (AR)"
+                    formControlName="arabicLastName" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group ">
+                  <label for="inputEmail4">Salutation</label>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Salutation"
+                    formControlName="salutation" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Address"
+                    formControlName="address" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Iqama</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Iqama" formControlName="iqama"
+                    maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Email</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Email" formControlName="email"
+                    maxlength="20">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Mobile</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Mobile"
+                    formControlName="mobile" maxlength="20" (keypress)="_sharedUtils.isNumber($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Telephone</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="TelephoneNumber"
+                    formControlName="telephoneNumber" maxlength="20" (keypress)="_sharedUtils.isNumber($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Date of birth</label>
+                  <input type="date" class="form-control" id="inputAddress" placeholder="Date of birth"
+                    formControlName="dateOfBirth" maxlength="20">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Gender</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Gender"
+                    formControlName="gender" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Occupation</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Occupation"
+                    formControlName="occupation" maxlength="20" (keypress)="_sharedUtils.isNumber($event)">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Education</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Education"
+                    formControlName="educationID" maxlength="20">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Marital Status</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Marital Status"
+                    formControlName="maritalStatusID" maxlength="20">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Company</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Company"
+                    formControlName="companyCR" maxlength="20">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label for="inputAddress">Driver</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Driver"
+                    formControlName="driverID" maxlength="20">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group float-right">
+                  <button type="submit" [disabled]="customerForm.invalid"
+                    class="btn btn-primary btn-block">{{ !customerId ? "Add" : "Update" }} Customer</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
