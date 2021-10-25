@@ -30,11 +30,11 @@ export class AddUserComponent implements OnInit {
       password: new FormControl("", [Validators.required]),
       contactNo: new FormControl("", [Validators.required]),
       designation: new FormControl("", [Validators.required]),
-      modifiedBy: new FormControl("", [Validators.required]),
-      modifiedOn: new FormControl("", [Validators.required]),
-      date: new FormControl("", [Validators.required]),
-      createdBy: new FormControl("", [Validators.required]),
-      createdOn: new FormControl("", [Validators.required]),
+     // modifiedBy: new FormControl("", [Validators.required]),
+     // modifiedOn: new FormControl("", [Validators.required]),
+     // date: new FormControl("", [Validators.required]),
+     // createdBy: new FormControl("", [Validators.required]),
+     // createdOn: new FormControl("", [Validators.required]),
       isActive: new FormControl(false, [Validators.required]),
 
 
@@ -79,6 +79,10 @@ export class AddUserComponent implements OnInit {
     } else {
       this._userService.addUser(this.userForm.value).subscribe((res: IStatus) => {
         console.log(res);
+
+        if (res.succeeded) {
+          this._router.navigateByUrl("/wazen/users");
+        }
       })
     }
   }

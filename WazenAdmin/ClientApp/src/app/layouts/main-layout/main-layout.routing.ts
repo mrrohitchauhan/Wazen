@@ -105,7 +105,7 @@ export const MainLayoutRoutes: Routes = [
     loadChildren: () =>
       import(
         "../../pages/InsuranceCompanies/add-insurancecompanies/add-insurancecompanies.module"
-      ).then((m) => m.AddInsurancecompaniesModule),
+      ).then((m) => m.AddInsuranceCompaniesModule),
   },
 
 {
@@ -113,7 +113,7 @@ export const MainLayoutRoutes: Routes = [
     loadChildren: () =>
       import(
         "../../pages/InsuranceCompanies/add-insurancecompanies/add-insurancecompanies.module"
-      ).then((m) => m.AddInsurancecompaniesModule),
+      ).then((m) => m.AddInsuranceCompaniesModule),
   },
   {
     path: "add-role",

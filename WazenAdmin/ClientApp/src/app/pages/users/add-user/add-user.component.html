@@ -4,7 +4,7 @@
     <div class="col-lg-12">
       <div class="card">
         <div class="card-header">
-          <h5 class="title">{{ !Id ? "Add" : "View" }} Role</h5>
+          <h5 class="title">{{ !Id ? "Add" : "View" }} User</h5>
         </div>
         <div class="card-body">
           <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
@@ -20,21 +20,21 @@
                 <div class="form-group">
                   <label for="inputPassword4">UserName</label>
                   <input type="text" class="form-control" id="username" placeholder="UserName"
-                    formControlName="username" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                    formControlName="username" maxlength="20">
                 </div>
               </div>
               <div class="col-md-6 pl-1">
                 <div class="form-group">
                   <label for="inputAddress">Email</label>
                   <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email"
-                    maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                    maxlength="20">
                 </div>
               </div>
               <div class="col-md-6 pl-1">
                 <div class="form-group">
                   <label for="inputAddress">Contact number</label>
                   <input type="text" class="form-control" id="ContactNo" placeholder="Contact number"
-                    formControlName="contactNo" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                    formControlName="contactNo" maxlength="20" (keypress)="_sharedUtils.isNumber($event)">
                 </div>
               </div>
               <div class="col-md-6 pl-1">
@@ -49,14 +49,14 @@
                 <div class="form-group">
                   <label for="inputAddress">Password</label>
                   <input type="password" class="form-control" id="Password" placeholder="Password"
-                    formControlName="password" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                    formControlName="password" maxlength="20">
                 </div>
               </div>
-              <div class="col-md-6 pl-1">
+ <!--             <div class="col-md-6 pl-1">
                 <div class="form-group">
                   <label for="inputAddress">Modified By</label>
                   <input type="number" class="form-control" id="ModifiedBy" placeholder="Modified By"
-                    formControlName="modifiedBy" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                    formControlName="modifiedBy" maxlength="20">
                 </div>
               </div>
               <div class="col-md-6 pl-1">
@@ -70,28 +70,28 @@
                 <div class="form-group">
                   <label for="inputAddress">Date</label>
                   <input type="date" class="form-control" id="Date" placeholder="Date" formControlName="date"
-                    maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                    maxlength="20">
                 </div>
               </div>
               <div class="col-md-6 pl-1">
                 <div class="form-group">
                   <label for="inputAddress">CreatedBy</label>
                   <input type="number" class="form-control" id="CreatedBy" placeholder="CreatedBy"
-                    formControlName="createdBy" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                    formControlName="createdBy" maxlength="20">
                 </div>
               </div>
               <div class="col-md-6 pl-1">
                 <div class="form-group">
                   <label for="inputAddress">CreatedOn</label>
                   <input type="date" class="form-control" id="CreatedOn" placeholder="CreatedOn"
-                    formControlName="createdOn" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                    formControlName="createdOn" maxlength="20">
                 </div>
-              </div>
+              </div>-->
               <div class="col-md-6 pl-1">
                 <div class="form-group">
                   <label for="inputAddress">Is Active</label>
                   <input type="checkbox" class="form-control" id="IsActive" placeholder="Is Active"
-                    formControlName="isActive" maxlength="20" (keypress)="_sharedUtils.isAlphabet($event)">
+                    formControlName="isActive" maxlength="20" >
                 </div>
               </div>
             </div>
