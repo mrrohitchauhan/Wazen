@@ -28,7 +28,7 @@
                   <th>Sr No</th>
                   <th>Name</th>
                   <th>Username</th>
-                  <th>ContactNo</th>
+                  <th>Contact No</th>
                   <th>Designation</th>
                   <th>Email</th>
                   <th>Action</th>
@@ -45,9 +45,10 @@
                   <td>{{ user.contactNo }}</td>
                   <td>{{ user.designation }}</td>
                   <td>{{ user.email }}</td>
+
                   <td>
                     <i class="now-ui-icons education_glasses custom-icon mr-3"
-                      [routerLink]="['/wazen/add-user', user.id]"></i>
+                       [routerLink]="['/wazen/add-user', user.id]"></i>
                     <i class="now-ui-icons ui-1_simple-remove custom-icon" (click)="deleteUser(user.id)"></i>
                   </td>
                 </tr>
